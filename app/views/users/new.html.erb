@@ -1,0 +1,32 @@
+<div class="container">    
+      <br/><br/><br/><br/><br/><br/>
+      <div class="row">
+        <div class="col s12 m8 offset-m2">    
+            <div class="col s12">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Đăng ký thành viên</span>
+                  <br/>
+                  
+                  <%= form_for @user do |f| %>
+                    <div>                                                                 
+                      <%= f.text_field :name, class:'validate', placeholder:'Tên đăng nhập' %>
+                    </div>
+                    <div>                                                                 
+                      <%= f.text_field :email, class:'validate', placeholder:'Email' %>
+                    </div>
+                    <div>                                                                 
+                      <%= f.password_field :password, class:'validate', placeholder:'Mật khẩu' %>
+                    </div>
+                    <p>
+                      <%= f.submit "ĐĂNG KÝ", class:'waves-effect waves-light btn' %>
+                    </p>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <br/>
+      <br/><br/><br/><br/>
+  	</div>

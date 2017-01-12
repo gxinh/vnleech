@@ -1,0 +1,9 @@
+<h1>List Roles</h1>
+
+<ul>
+    <% @roles.each do |ro| %>
+        <li><%= ro.name %> - <%= link_to "Delete", admin_role_path(ro), method: :delete, data: {confirm: 'Bạn có muốn xóa Role này không ?'} %></li>
+    <% end %>
+</ul>
+<br/>
+<%= link_to "Add new role", new_admin_role_path %>

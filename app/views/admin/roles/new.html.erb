@@ -1,0 +1,6 @@
+<h1>Add role</h1>
+<%= form_for [:admin, @role] do |f| %>
+    Name: <%= f.text_field :name %>
+    <br/>
+    <%= f.submit "OK" %>
+<% end %>

@@ -1,0 +1,47 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.container .row {
+	margin-left: -5.75rem;
+	margin-right: -5.75rem;
+}
+
+#new_news {
+	background:image-url("icon_new.gif");
+	width:23px; 
+   height:12px;
+   display: inline-block;      
+}
+
+#news_title {
+	color: #e53935;
+	font-style: bold;
+	font-size: 14px;
+}
+
+input[type="text"]#linkurl::-webkit-input-placeholder, 
+input[type="password"]#linkpassword::-webkit-input-placeholder
+ {
+	color: white;
+	padding-left: 10px;
+}
+
+.welcomeuser {
+	color: #ffc000;
+}
+
+.member_class {
+	color: #86ec3e;
+}

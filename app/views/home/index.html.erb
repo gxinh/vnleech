@@ -1,0 +1,73 @@
+
+  <div class="container">
+    
+      <div class="row">
+        <div class="col s8">
+          <div class="col s12">
+              <div class="card grey lighten-2">
+                <div class="card-content black-text">                  
+                  <p>-[Update 22-12-2016] <span id="news_title">Sửa lỗi getlink</span> <span id="new_news"></span></p>
+                  <p>-[Update 29-11-2016] <span id="news_title">4Share.VN hiện tại chỉ dành cho VIP & Premium</span> <span id="new_news"/></p>
+                  <p>-[Update 02-10-2016] <span id="news_title">Hỗ trợ get nhiều link cùng lúc </span><span id="new_news"/></p>
+                  <p>-[Update 02-10-2016] <span id="news_title">Filefactory Online Now </span> <span id="new_news"/></p>
+                  <p>-[Update 14-09-2016] <span id="news_title">Keep2Share  Turbobit Online Now </span><span id="new_news"/></p>
+                  <p>Hãy share & Like để giúp team phát triển nhiều host hơn nữa</p>
+                </div>              
+              </div>
+          </div>
+          <div class="col s12">
+              <div class="card teal">
+                <div class="card-content white-text"> 
+                  <!-- <span class="card-title">Leech link</span> -->
+                  <form>                    
+                      <div>                                           
+                        <input id="linkurl" type="text" class="validate" placeholder="Input your link">
+                      </div>
+                      <div>                                                
+                        <input id="linkpassword" type="password" class="validate" placeholder="password if any">
+                      </div>
+                      <p>                        
+                        <a class="waves-effect waves-light btn">GET LINK</a>
+                      </p>
+                  </form>
+                </div>
+              </div>
+          </div>          
+        </div>
+        <div class="col s4">
+          
+            <div class="col s12">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <% if @current_user %>
+                    <span class="card-title"><span class="welcomeuser">Hi! <%= @current_user.name %></span></span>
+                    <p>Loại tài khoản: <span class="member_class"><%= @current_user.role.name %> Member</span></p>
+                    <p>Số ngày còn lại: 30 ngày 2 giờ</p>
+                  <% else %>
+                    <span class="card-title">Login</span>
+                    <%= form_tag sessions_path do %>
+                      <div>                                                                      
+                        <%= text_field_tag :name, "", class: 'validate', placeholder: 'Username' %>
+                      </div>
+                      <div>                                                                      
+                        <%= password_field_tag :password, "", class: 'validate', placeholder: 'Password' %>
+                      </div>
+                      <p>
+                        <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                        <label for="filled-in-box">Remember Me</label>
+                        &nbsp;&nbsp;&nbsp;<%= submit_tag "LOGIN", class:'waves-effect waves-light btn' %>
+                      </p>
+                    <% end %>
+                  <% end %>
+                </div>
+                <!-- <div class="card-action">
+                  <a href="#">This is a link</a>
+                  <a href="#">This is a link</a>
+                </div> -->
+              </div>
+            </div>
+          
+        </div>
+      </div>
+  </div>
+
